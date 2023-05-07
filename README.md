@@ -1,3 +1,10 @@
+项目介绍
+基于 Vue 3 + Spring Boot + Elastic Stack 的一站式聚合搜索平台，也是简化版的企业级搜索中台。
+对用户来说，使用该平台，可以在同一个页面集中搜索出不同来源、不同类型的内容，提升用户的检索效率和搜索体验。
+项目架构图
+![image](https://user-images.githubusercontent.com/95902110/236656326-9b464fbd-52a4-4df8-b91a-aad092d97a6f.png)
+
+
 # SpringBoot 项目初始模板
 
 基于 Java SpringBoot 的项目初始模板，整合了常用框架和主流业务的示例代码。
