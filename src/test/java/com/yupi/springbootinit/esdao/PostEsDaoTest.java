@@ -4,22 +4,20 @@ import com.yupi.springbootinit.model.dto.post.PostEsDTO;
 import com.yupi.springbootinit.model.dto.post.PostQueryRequest;
 import com.yupi.springbootinit.model.entity.Post;
 import com.yupi.springbootinit.service.PostService;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-import javax.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
+import javax.annotation.Resource;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
 /**
  * 帖子 ES 操作测试
- *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @SpringBootTest
 public class PostEsDaoTest {
@@ -31,7 +29,7 @@ public class PostEsDaoTest {
     private PostService postService;
 
     @Test
-    void test() {
+   void test() {
         PostQueryRequest postQueryRequest = new PostQueryRequest();
         com.baomidou.mybatisplus.extension.plugins.pagination.Page<Post> page =
                 postService.searchFromEs(postQueryRequest);
@@ -49,19 +47,17 @@ public class PostEsDaoTest {
 
     @Test
     void testAdd() {
-        PostEsDTO postEsDTO = new PostEsDTO();
-        postEsDTO.setId(1L);
-        postEsDTO.setTitle("test");
-        postEsDTO.setContent("test");
-        postEsDTO.setTags(Arrays.asList("java", "python"));
-        postEsDTO.setThumbNum(1);
-        postEsDTO.setFavourNum(1);
-        postEsDTO.setUserId(1L);
-        postEsDTO.setCreateTime(new Date());
-        postEsDTO.setUpdateTime(new Date());
-        postEsDTO.setIsDelete(0);
-        postEsDao.save(postEsDTO);
-        System.out.println(postEsDTO.getId());
+        PostEsDTO post = new PostEsDTO();
+        post.setId(1L);
+        post.setTitle("佳颖");
+        post.setContent("乐乐是佳颖的吗");
+        post.setTags(Arrays.asList("java", "python"));
+        post.setUserId(1L);
+        post.setCreateTime(new Date());
+        post.setUpdateTime(new Date());
+        post.setIsDelete(0);
+        postEsDao.save(post);
+        System.out.println(post.getId());
     }
 
     @Test

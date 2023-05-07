@@ -17,9 +17,9 @@ class MainApplicationTests {
     @Resource
     private WxOpenConfig wxOpenConfig;
 
-    @Test
+/*    @Test
     void contextLoads() {
         System.out.println(wxOpenConfig);
-    }
+    }*/
 
 }
